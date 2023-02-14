@@ -1,18 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { ChakraProvider } from '@chakra-ui/react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import './index.css';
-import App from './App';
+import { ErrorPage, HomePage, PersonPage } from './pages';
 import reportWebVitals from './reportWebVitals';
+import { Header, Footer, Main } from './components';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
+const router = createBrowserRouter([
+  { path: '/person/:id', element: <PersonPage /> },
+  {
+    path: '/',
+    element: <HomePage />,
+    errorElement: <ErrorPage />,
+  },
+]);
+
 root.render(
   <React.StrictMode>
     <ChakraProvider>
-      <App />
+      <Header />
+      <Main>
+        <RouterProvider router={router} />
+      </Main>
+      <Footer />
     </ChakraProvider>
   </React.StrictMode>
 );
