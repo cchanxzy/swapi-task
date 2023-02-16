@@ -8,13 +8,14 @@ interface Props {
 export const Main: FC<Props> = ({ children }) => {
   return (
     <Grid
-      gridTemplateColumns={'1fr 5fr 1fr'}
+      gridTemplateColumns={{ base: '1fr', lg: '1fr 5fr 1fr' }}
       gap="1"
       color="blackAlpha.700"
       fontWeight="bold"
-      p={5}
+      px={10}
+      py={20}
     >
-      <GridItem colStart={2} colEnd={3} minHeight="50rem">
+      <GridItem colStart={{ base: 1, lg: 2 }} colEnd={{ base: 2, lg: 3 }}>
         <main>{children}</main>
       </GridItem>
     </Grid>

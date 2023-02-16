@@ -1,12 +1,12 @@
 import React from 'react';
-import { Center } from '@chakra-ui/react';
+import { Box, Center } from '@chakra-ui/react';
 
 export const Footer = () => {
   return (
-    <footer>
+    <Box as="footer" position="fixed" bottom={0} width="100%">
       <Center bg="tomato" h="100px" py={3} color="white">
         {new Date().getFullYear()}
       </Center>
-    </footer>
+    </Box>
   );
 };
