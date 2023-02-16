@@ -14,6 +14,7 @@ export const Main: FC<Props> = ({ children }) => {
       fontWeight="bold"
       px={10}
       py={20}
+      bg="white"
     >
       <GridItem colStart={{ base: 1, lg: 2 }} colEnd={{ base: 2, lg: 3 }}>
         <main>{children}</main>

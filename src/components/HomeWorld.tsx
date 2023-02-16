@@ -21,9 +21,11 @@ export const HomeWorld: FC<Props> = ({ planetId }) => {
 
   return (
     <Box>
-      <Text textTransform="capitalize">
-        Homeworld: {planet ? planet.name : <Spinner size="xs" />}
-      </Text>
+      {planet ? (
+        <Text textTransform="capitalize">Homeworld: {planet.name}</Text>
+      ) : (
+        <Spinner size="xs" />
+      )}
     </Box>
   );
 };
