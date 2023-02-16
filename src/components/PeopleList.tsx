@@ -54,7 +54,8 @@ export const PeopleList: FC<Props> = ({ people }) => {
 
   return (
     <Center>
-      Loading <Spinner size="xl" />
+      <div>Loading</div>
+      <Spinner size="xl" ml={10} />
     </Center>
   );
 };
