@@ -1,5 +1,5 @@
 describe('navigate to character', () => {
-  before(() => {
+  beforeEach(() => {
     cy.intercept('GET', 'https://swapi.dev/api/people', {
       fixture: 'people.json',
     });
