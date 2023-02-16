@@ -1,4 +1,4 @@
-import { Person } from '../types/Person1';
+import { Person } from '../types/Person';
 
 type FetchPeopleResponse = {
   readonly count: number;
