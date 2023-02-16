@@ -1,5 +1,7 @@
 # SWAPI Task
 
+[![Build and Deploy](https://github.com/cchanxzy/swapi-task/actions/workflows/main.yml/badge.svg)](https://github.com/cchanxzy/swapi-task/actions/workflows/main.yml)
+
 ## Preview
 
 This is deployed to: [https://cchanxzy.github.io/swapi-task/](https://cchanxzy.github.io/swapi-task/).
