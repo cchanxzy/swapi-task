@@ -26,7 +26,7 @@ export const FilmsList: FC<Props> = ({ filmIds }) => {
         .then((response) => {
           setFilms(response.filter((film) => !!film) as Film[]);
         })
-        .then((e) => {
+        .catch((e) => {
           console.error(e);
         });
     }
