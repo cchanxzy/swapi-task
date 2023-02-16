@@ -14,7 +14,9 @@ export const HomeWorld: FC<Props> = ({ planetId }) => {
   useEffect(() => {
     if (planetId) {
       fetchPlanet(planetId).then((response) => {
-        setPlanet(response);
+        if (response) {
+          setPlanet(response);
+        }
       });
     }
   }, [planetId]);

@@ -7,8 +7,12 @@ type FetchPeopleResponse = {
   readonly results: Array<Person>;
 };
 
-export const fetchPeople = async (): Promise<FetchPeopleResponse> => {
-  return fetch('https://swapi.dev/api/people/').then((response) => {
-    return response.json() as Promise<FetchPeopleResponse>;
-  });
+export const fetchPeople = async (): Promise<FetchPeopleResponse | void> => {
+  return fetch('https://swapi.dev/api/people/')
+    .then((response) => {
+      return response.json() as Promise<FetchPeopleResponse>;
+    })
+    .catch((e) => {
+      console.error(e);
+    });
 };

@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC } from 'react';
 import {
   Card,
   CardHeader,
@@ -12,19 +12,16 @@ import {
 } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
 
-import { fetchPeople } from '../api';
 import { Person } from '../types';
 import { HomeWorld } from './HomeWorld';
 
-export const PeopleList: FC = () => {
-  const [people, setPeople] = useState<Array<Person>>([]);
+type Props = {
+  readonly people: Array<
+    Pick<Person, 'url' | 'name' | 'hair_color' | 'gender' | 'homeworld'>
+  >;
+};
 
-  useEffect(() => {
-    fetchPeople().then((response) => {
-      setPeople(response.results);
-    });
-  }, []);
-
+export const PeopleList: FC<Props> = ({ people }) => {
   if (people.length > 0) {
     return (
       <SimpleGrid minChildWidth="250px" spacing={10}>
@@ -57,7 +54,7 @@ export const PeopleList: FC = () => {
 
   return (
     <Center>
-      <Spinner size="xl" />
+      Loading <Spinner size="xl" />
     </Center>
   );
 };

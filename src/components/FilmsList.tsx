@@ -22,9 +22,13 @@ export const FilmsList: FC<Props> = ({ filmIds }) => {
       const filmPromises = filmIds.map((filmId) => {
         return fetchFilm(filmId);
       });
-      Promise.all(filmPromises).then((response) => {
-        setFilms(response);
-      });
+      Promise.all(filmPromises)
+        .then((response) => {
+          setFilms(response.filter((film) => !!film) as Film[]);
+        })
+        .then((e) => {
+          console.error(e);
+        });
     }
   }, [filmIds]);
 

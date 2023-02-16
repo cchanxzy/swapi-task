@@ -13,7 +13,9 @@ export const PersonPage = () => {
   useEffect(() => {
     if (id) {
       fetchPerson(id).then((response) => {
-        setPerson(response);
+        if (response) {
+          setPerson(response);
+        }
       });
     }
   }, [id]);
