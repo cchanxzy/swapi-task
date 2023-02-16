@@ -1,5 +1,11 @@
 # SWAPI Task
 
+## Preview
+
+This is deployed to: [https://cchanxzy.github.io/swapi-task/](https://cchanxzy.github.io/swapi-task/).
+
+![Home page preview](preview/home-page.png 'Home page')
+
 ## Description
 
 Demo project using [https://swapi.dev/](https://swapi.dev/)
@@ -20,7 +26,3 @@ Built using:
 `yarn test` to run tests
 
 `yarn cypress:run` to run cypress tests
-
-## Preview
-
-This is deployed to: [https://cchanxzy.github.io/swapi-task/](https://cchanxzy.github.io/swapi-task/).
