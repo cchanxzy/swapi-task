@@ -2,6 +2,7 @@
   "name": "swapi-task",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://cchanxzy.github.io/swapi-task/",
   "dependencies": {
     "@chakra-ui/react": "^2.5.0",
     "@emotion/react": "^11.10.5",
